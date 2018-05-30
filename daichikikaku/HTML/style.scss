@@ -1,0 +1,200 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+/* for WinIE7 */
+
+*:first-child + html body {
+    font-size: 0.75em;
+    font-family: メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/* For modern browsers */
+
+.cf:before,
+.eventorganiser-event-meta:before,
+.cf:after,
+.eventorganiser-event-meta:after {
+    content: "";
+    display: table;
+}
+
+.cf:after,
+.eventorganiser-event-meta:after {
+    clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+
+.cf,
+.eventorganiser-event-meta {
+    zoom: 1;
+}
+
+//sass
+$base-Font: 16px;
+$shadow: 0 0 10px rgba(0, 0, 0, 0.21);
+//div{@include greenFont;}のようにして使用する
+//@mixinは@includeで呼び出す
+/*
+@mixin greenFont {
+    font-size: 16px; //下層ページコーディング時に変更する
+    color: $green;
+}
+
+@mixin column_width {
+    width: 960px;
+    margin: 0 auto;
+}
+
+@mixin semi_wide_width {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+@mixin base_font {
+    font-size: 16px;
+    color: #444;
+}
+*/
+
+@media screen and (max-width: 768px) {
+    @mixin column_width {
+        width: 100%;
+        margin: 0 auto;
+    }
+    @mixin semi_wide_width {
+        width: 100%;
+        margin: 0 auto;
+    }
+    @mixin base_font {
+        font-size: 100%;
+        color: #444;
+    }
+    /*----------
+    共通部分
+    -----------*/
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    a {
+        display: block;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+        &:link {
+            -webkit-transition: 0.21s;
+            transition: 0.21s;
+        }
+    }
+
+    .line_break {
+        padding-top: 1.375em;
+    }
+    body {
+        font-family: 'Noto Sans Japanese', 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        letter-spacing: 0.095em;
+        font-weight: 500;
+        color: #444;
+        line-height: 1.6;
+        font-size: 100%;
+        padding-top: 10px;
+    }
+
+    .column_width {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .topicpath {
+        display: none;
+    }
+
+    /*-------------------------------
+    ヘッダーエリア
+    -------------------------------*/
+    header {}
+
+    /*-------------------------------
+    ナビエリア
+    -------------------------------*/
+    nav {}
+    /*-------------------------------
+    メインビジュアルエリア
+    -------------------------------*/
+    /*--------------------------------
+    フッターエリア    
+    ---------------------------------*/
+} //@media screen and (max-width: 768px)
+@media screen and (min-width: 769px) {
+    /*----------
+    共通部分
+    -----------*/
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    a {
+        display: block;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+        &:link {
+            -webkit-transition: 0.21s;
+            transition: 0.21s;
+        }
+        &:hover {
+            opacity: .7;
+        }
+    }
+    body {
+        min-width: 960px;
+        line-height: 1.6;
+        letter-spacing: 0.095em;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .topicpath {
+        width: 960px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        text-align: right;
+        font-size: 12px;
+        color: #aaa;
+    }
+
+    /*-------------------------------
+    ヘッダーエリア
+    -------------------------------*/
+    header {}
+    /*-------------------------------
+    ナビエリア
+    -------------------------------*/
+    nav {}
+
+    /*-------------------------------
+    メインビジュアルエリア
+    -------------------------------*/
+    /*--------------------------------
+    フッターエリア    
+    ---------------------------------*/
+    footer {}
+} //@media screen and (min-width: 769px)
